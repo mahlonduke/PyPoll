@@ -119,7 +119,7 @@ with open(csvpath, mode='r', newline='') as csvfile:
     print(f"Election Results \n ---------------------- \n Total Votes: {totalVotes} \n ---------------------- \n Khan: {percentageKhan}% ({countKhan}) \n Correy: {percentageCorrey}% ({countCorrey}) \n Li: {percentageLi}% ({countLi}) \n O'Tooley: {percentageOTooley}% ({countOTooley}) \n ---------------------- \n Winner: {winner} \n ----------------------")
 
 # Write the results to a TXT file
-results = open("results.txt","w+")
+results = open("Resources/results.txt","w+")
 results.write(f"Election Results \n ---------------------- \n Total Votes: {totalVotes} \n ---------------------- \n Khan: {percentageKhan}% ({countKhan}) \n Correy: {percentageCorrey}% ({countCorrey}) \n Li: {percentageLi}% ({countLi}) \n O'Tooley: {percentageOTooley}% ({countOTooley}) \n ---------------------- \n Winner: {winner} \n ----------------------")
 
 # --------------------------------------------------------------------------------------------------
