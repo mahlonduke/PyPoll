@@ -32,19 +32,6 @@
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
-# Pseudo code
-# Open the file
-# Loop through the file to read all of the rows
-# Use if statements to check the candidate against the list of known candidates
-    # When a match is found, add 1 to the vote count for that candidate
-    # If no match is found, then add a new entry to the candidates list and add 1 to its count
-# Calculate the vote percentage for each candidate
-# Compare the totals for each candidate to find the winner
-# Print the result information
-
-
-
-#------------------------------------------------------------------------------------------------------------------------------------------------------
 # Begin actual code
 
 
@@ -80,8 +67,6 @@ with open(csvpath, mode='r', newline='') as csvfile:
 
     names = ['khan', 'correy', 'li', 'o\'tooley']
     for row in csvreader:
-        # Print row content for comparison
-        #print(row[2])
         # Check which candidate this row represents, then add their vote
         if row[2].lower() == 'khan':
             countKhan += 1
@@ -121,6 +106,3 @@ with open(csvpath, mode='r', newline='') as csvfile:
 # Write the results to a TXT file
 results = open("Resources/results.txt","w+")
 results.write(f"Election Results \n ---------------------- \n Total Votes: {totalVotes} \n ---------------------- \n Khan: {percentageKhan}% ({countKhan}) \n Correy: {percentageCorrey}% ({countCorrey}) \n Li: {percentageLi}% ({countLi}) \n O'Tooley: {percentageOTooley}% ({countOTooley}) \n ---------------------- \n Winner: {winner} \n ----------------------")
-
-# --------------------------------------------------------------------------------------------------
-#
